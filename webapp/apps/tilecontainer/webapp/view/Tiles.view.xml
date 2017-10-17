@@ -1,0 +1,63 @@
+<mvc:View controllerName="de.app.tilecontainer.controller.Tiles" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:c="sap.ui.core"
+width="100%" height="100%">
+	<App homeIcon="https://openui5.hana.ondemand.com/resources/sap/ui/documentation/sdk/images/logo_ui5.pngs">
+		<pages>
+			<Page>
+				<customHeader>
+					<OverflowToolbar>
+
+							<OverflowToolbarButton text="Home" type="sap.m.ButtonType.Back" icon="sap-icon://home">
+								<layoutData>
+									<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								</layoutData>
+							</OverflowToolbarButton>
+							
+							<ToolbarSpacer width=""/>
+							
+							<SearchField width="350px" showRefreshButton="true"  liveChange="onAppLiveSearch">
+								<layoutData>
+									<OverflowToolbarLayoutData priority="High"/>
+								</layoutData>
+							</SearchField>
+							
+							<ToolbarSpacer width=""/>
+							
+							<OverflowToolbarButton text="Settings" icon="sap-icon://user-settings">
+								<layoutData>
+									<OverflowToolbarLayoutData priority="Low"/>
+								</layoutData>
+							</OverflowToolbarButton>
+
+					</OverflowToolbar>
+				</customHeader>
+				<landmarkInfo>
+					
+				</landmarkInfo>
+
+				<content>
+					
+					<TileContainer width="100%" height="100%" tiles="{path: 'AppTiles>/apps', factory: '.appTileListFactory'}" />
+					
+					<TileContainer width="100%" height="100%">
+						<tiles>
+							<StandardTile press="onAppTilePress" title="demoapp App" info="in-page hash" number="1" icon="sap-icon://activate"
+								activeIcon="sap-icon://flag">
+								<customData>
+									<c:CustomData key="tileAppId" value="demoapp"/>
+									<c:CustomData key="tileAppUrl" value="#Demoapp-show"/>
+								</customData>
+							</StandardTile>
+							<StandardTile press="onAppTilePress" title="Worklist-maintain" info="in-page hash" number="2" icon="sap-icon://overflow" infoState="Error">
+								<customData>
+									<c:CustomData key="tileAppId" value="worklist"/>
+									<c:CustomData key="tileAppUrl" value="#Worklist-maintain"/>
+								</customData>
+							</StandardTile>
+						</tiles>
+					</TileContainer>
+				
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

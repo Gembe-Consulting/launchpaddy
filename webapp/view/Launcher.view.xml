@@ -1,0 +1,12 @@
+<mvc:View controllerName="de.app.launchpaddy.controller.Launcher"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Shell id="shell">
+		<app>
+			<!-- 
+				The following App will be our home of all the component containers 
+				All Components are put as Page object onto the pages aggregation
+			-->
+			<App id="application" />
+		</app>
+	</Shell>
+</mvc:View>

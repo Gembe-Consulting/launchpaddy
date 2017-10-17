@@ -1,0 +1,40 @@
+{
+   "apps":[
+      {
+         "intent":"#Worklist-maintain",
+         "title": "Worklist App",
+         "description": "Use the worklist",
+         "additionalInformation":"SAPUI5.Component=sap.ui.demo.worklist",
+         "applicationType":"URL",
+         "url":"./apps/worklist/webapp/",
+         "loadCoreExt":false,
+         "loadDefaultDependencies":false,
+         "navigationMode":"embedded",
+         "ui5ComponentName":"sap.ui.demo.worklist"
+      },
+      {
+         "intent":"#Demoapp-show",
+         "title": "Demo App",
+         "description": "Use the worklist",
+         "additionalInformation":"SAPUI5.Component=demoapp",
+         "applicationType":"URL",
+         "url":"./apps/demoapp/webapp/",
+         "loadCoreExt":false,
+         "loadDefaultDependencies":false,
+         "navigationMode":"embedded",
+         "ui5ComponentName":"demoapp"
+      },
+      {
+         "intent":"#Shell-home",
+         "title": "Launchpaddy",
+         "description": "A Launchpad for your UI5 applications",
+         "additionalInformation":"SAPUI5.Component=de.app.tilecontainer",
+         "applicationType":"URL",
+         "url":"./apps/tilecontainer/webapp/",
+         "loadCoreExt":false,
+         "loadDefaultDependencies":false,
+         "navigationMode":"embedded",
+         "ui5ComponentName":"de.app.tilecontainer"
+      }
+   ]
+}

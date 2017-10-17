@@ -1,0 +1,8 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core">
+	<BusyDialog
+		title="Loading"
+		text="We are loading your application. Please hang on..."
+		close="onLoadingDialogClosed"/>
+</c:FragmentDefinition>

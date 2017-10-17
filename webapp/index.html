@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Launchpaddy</title>
+
+    <script type="text/javascript">
+    
+        window["de-app-launchpaddy-config"] = {
+            renderer: "launchpaddy",
+            renderers: {
+                "launchpaddy": {
+                    componentData: {
+                        config: {
+                        	rootIntent: "Shell-home",
+                            author: "Laborratte",
+                            inspiredBy: "SAP FLP",
+							testMode: false
+                        }
+                    }
+                }
+            },
+            applications: {
+                "Shell-Home": {
+                    additionalInformation: "SAPUI5.Component=de.app.launchpaddy",
+                    applicationType: "URL",
+                    url: "./apps/demoapp/webapp",
+                    description: "Launchpaddy for UI5 Applications",
+                    title: "Launchpaddy"
+                },
+                "Demoapp-show": {
+                    additionalInformation: "SAPUI5.Component=demoapp",
+                    applicationType: "URL",
+                    url: "./apps/demoapp/webapp",
+                    description: "SAP Demoapp",
+                    title: "Show Demoapp"
+                }
+            }
+        };
+        
+    </script>
+
+	<script src="./launchpaddy-startup.js" type="text/javascript"></script>
+
+    <script id="sap-ui-bootstrap" 
+		    src="../../resources/sap-ui-core.js" 
+		    data-sap-ui-preload="async" 
+		    data-sap-ui-libs="sap.m" 
+		    data-sap-ui-theme="sap_belize" 
+		    data-sap-ui-compatVersion="edge" 
+		    data-sap-ui-resourceroots='{"de.app.launchpaddy": "./"}' >
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    
+    <script src = "./plugins/jquery.highlight-5.js" type = "text/javascript"></script>
+
+    <script type="text/javascript">
+        sap.ui.getCore().attachInit(function() {
+            sap.ui.require([], function() {
+				de.app.launchpaddy.PadContainer.create().placeAt("content");
+            });
+        });
+    </script>
+
+</head>
+
+<body class="sapUiBody" id="content">
+        <p align="center" width="100%">Bitte warten, die Anwendung wird geladen...</p>
+</body>
+</html>
